@@ -1,0 +1,10 @@
+services:
+  reconpilot:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - reconpilot_data:/data
+    restart: unless-stopped
+volumes:
+  reconpilot_data:
